@@ -1,0 +1,25 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+}
+
+.container {
+    width: 50%;
+    max-width: 25rem;
+}
+
+.table tr,th{
+    height: 3rem;
+}
+
+.table th{
+    background-color: #bec1c6;
+}
+
+.table td{
+    padding-left: 1rem;
+}
+
+.header th{
+    background-color: grey;
+}
