@@ -16,7 +16,7 @@ class TodoList extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="container">
         <h1>This is my todo list</h1>
         {this.renderAddTodo()}     
         { this.state.currentItems
@@ -27,7 +27,7 @@ class TodoList extends Component {
 
   renderAddTodo() {
     return (
-      <div>
+      <div className="addTodo">
         <input type="text" ref={this.ref} />
         <button onClick={ this.addTodo }>Add todo</button>
       </div> 

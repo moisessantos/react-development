@@ -24,9 +24,9 @@ class ProductTable extends Component {
     });
 
     return (
-      <table>
+      <table className='table container'>
         <thead>
-          <tr>
+          <tr className='header'>
             <th>Name</th>
             <th>Price</th>
           </tr>
