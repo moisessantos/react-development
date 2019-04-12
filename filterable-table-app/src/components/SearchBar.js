@@ -4,14 +4,13 @@ import PropTypes from 'prop-types';
 class SearchBar extends Component {
   constructor(){
     super();
-    this.ref = React.createRef();
     this.filter = this.filter.bind(this);
   }
 
   render() {
     return (
       <form className="container">
-        <input type="text" placeholder="Search..." ref={this.ref} onChange={this.filter}/>
+        <input type="text" placeholder="Search..." onChange={e => this.filter(e)}/>
         <p>
           <input type="checkbox" onClick={this.props.onClick} />
           {' '}
@@ -21,8 +20,8 @@ class SearchBar extends Component {
     );
   }
   
-  filter() {
-    this.props.filter(this.ref.current.value);
+  filter(e) {
+    this.props.filter(e.target.value);
   }
 }
 

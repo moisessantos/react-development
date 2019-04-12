@@ -30,7 +30,7 @@ class FilterableProductTable extends Component {
 
   filterProduct(name) {
     this.setState({
-      filteredProducts: this.state.filteredProducts.filter(product => product.name.indexOf(name) !== -1)
+      filteredProducts: this.props.products.filter(product => product.name.indexOf(name) !== -1)
     });
   }
 
