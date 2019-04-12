@@ -1,0 +1,31 @@
+.container {
+    width: 100%;
+}
+
+@media only screen and (min-width: 750px){
+    .container {
+        width: 50%;
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+li {
+    height: 3rem;
+    padding: 1.5rem 0 0 1.5rem;
+    list-style: none;
+    background-color: #bec1c6;
+}
+
+button {
+    margin-right: 3rem;
+    float: right;
+}
+
+.addTodo {
+    background-color: grey;
+    height: 3rem;
+    padding: 1.5rem 0 0 1.5rem;
+}
