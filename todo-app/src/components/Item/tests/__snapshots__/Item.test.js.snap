@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item component should render snapshot 1`] = `
+<li>
+  <span>
+    Do homework
+  </span>
+  <button
+    onClick={[Function]}
+  >
+    Delete
+  </button>
+</li>
+`;

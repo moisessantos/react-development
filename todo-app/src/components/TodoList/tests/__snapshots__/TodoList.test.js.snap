@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoList component should render snapshot 1`] = `
+<div
+  className="container"
+>
+  <h1>
+    This is my todo list
+  </h1>
+  <div
+    className="addTodo"
+  >
+    <input
+      type="text"
+    />
+    <button
+      onClick={[Function]}
+    >
+      Add todo
+    </button>
+  </div>
+  <Memo(Item)
+    key="0"
+    onDelete={[Function]}
+  >
+    Get up
+  </Memo(Item)>
+  <Memo(Item)
+    key="1"
+    onDelete={[Function]}
+  >
+    Do homework
+  </Memo(Item)>
+</div>
+`;
