@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterableProductTable component should filter by name 1`] = `
+<div
+  className="wrapper"
+>
+  <SearchBar
+    handleClick={[Function]}
+    handleFilter={[Function]}
+  />
+  <ProductTable
+    products={
+      Array [
+        Object {
+          "category": "Electronics",
+          "name": "iPod Touch",
+          "price": "$99.99",
+          "stocked": true,
+        },
+      ]
+    }
+  />
+</div>
+`;
+
+exports[`FilterableProductTable component should filter by stock 1`] = `
+<div
+  className="wrapper"
+>
+  <SearchBar
+    handleClick={[Function]}
+    handleFilter={[Function]}
+  />
+  <ProductTable
+    products={
+      Array [
+        Object {
+          "category": "Sporting Goods",
+          "name": "Football",
+          "price": "$49.99",
+          "stocked": true,
+        },
+        Object {
+          "category": "Electronics",
+          "name": "iPod Touch",
+          "price": "$99.99",
+          "stocked": true,
+        },
+      ]
+    }
+  />
+</div>
+`;
+
+exports[`FilterableProductTable component should render snapshot 1`] = `
+<div
+  className="wrapper"
+>
+  <SearchBar
+    handleClick={[Function]}
+    handleFilter={[Function]}
+  />
+  <ProductTable
+    products={
+      Array [
+        Object {
+          "category": "Sporting Goods",
+          "name": "Football",
+          "price": "$49.99",
+          "stocked": true,
+        },
+        Object {
+          "category": "Sporting Goods",
+          "name": "Basketball",
+          "price": "$29.99",
+          "stocked": false,
+        },
+        Object {
+          "category": "Electronics",
+          "name": "iPod Touch",
+          "price": "$99.99",
+          "stocked": true,
+        },
+      ]
+    }
+  />
+</div>
+`;

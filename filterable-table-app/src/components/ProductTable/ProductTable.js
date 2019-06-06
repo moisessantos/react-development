@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ProductRow, ProductCategoryRow } from './';
+import { ProductRow, ProductCategoryRow } from '../';
 
 class ProductTable extends Component {
   render() {

@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
-class ProductRow extends Component {
-  render() {
-    const {name, stocked, price} = this.props.product;
+const ProductRow = ({ product }) => {
+    const { name, stocked, price } = product;
 
     return (
       <tr>
@@ -17,8 +16,7 @@ class ProductRow extends Component {
         <td>{price}</td>
       </tr>
     );
-  }
-}
+  };
 
 ProductRow.propTypes = {
   product: PropTypes.shape({
@@ -27,4 +25,7 @@ ProductRow.propTypes = {
     name: PropTypes.string.isRequired,
   }).isRequired,
 };
-export default ProductRow;
+
+ProductRow.displayName = 'ProductRow';
+
+export default memo(ProductRow);

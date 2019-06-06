@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductTable component should render snapshot 1`] = `
+<table
+  className="table container"
+>
+  <thead>
+    <tr
+      className="header"
+    >
+      <th>
+        Name
+      </th>
+      <th>
+        Price
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <Memo(ProductCategoryRow)
+      category="Sporting Goods"
+      key="Sporting Goods"
+    />
+    <Memo(ProductRow)
+      key="Football"
+      product={
+        Object {
+          "category": "Sporting Goods",
+          "name": "Football",
+          "price": "$49.99",
+          "stocked": true,
+        }
+      }
+    />
+    <Memo(ProductRow)
+      key="Basketball"
+      product={
+        Object {
+          "category": "Sporting Goods",
+          "name": "Basketball",
+          "price": "$29.99",
+          "stocked": false,
+        }
+      }
+    />
+    <Memo(ProductCategoryRow)
+      category="Electronics"
+      key="Electronics"
+    />
+    <Memo(ProductRow)
+      key="iPod Touch"
+      product={
+        Object {
+          "category": "Electronics",
+          "name": "iPod Touch",
+          "price": "$99.99",
+          "stocked": true,
+        }
+      }
+    />
+  </tbody>
+</table>
+`;

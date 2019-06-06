@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductCategoryRow component should render snapshot 1`] = `
+<tr>
+  <th
+    colSpan="2"
+  >
+    sports
+  </th>
+</tr>
+`;

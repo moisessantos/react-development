@@ -12,7 +12,7 @@ class SearchBar extends Component {
       <form className="container">
         <input type="text" placeholder="Search..." onChange={e => this.filter(e)}/>
         <p>
-          <input type="checkbox" onClick={this.props.onClick} />
+          <input type="checkbox" onClick={this.props.handleClick} />
           {' '}
           Only show products in stock
         </p>
@@ -21,13 +21,13 @@ class SearchBar extends Component {
   }
   
   filter(e) {
-    this.props.filter(e.target.value);
+    this.props.handleFilter(e.target.value);
   }
 }
 
 SearchBar.propTypes = {
-  filter: PropTypes.func.isRequired,
-  onClick: PropTypes.func.isRequired
+  handleFilter: PropTypes.func.isRequired,
+  handleClick: PropTypes.func.isRequired
 };
 
 export default SearchBar;

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar component should render snapshot 1`] = `
+<form
+  className="container"
+>
+  <input
+    onChange={[Function]}
+    placeholder="Search..."
+    type="text"
+  />
+  <p>
+    <input
+      onClick={[MockFunction]}
+      type="checkbox"
+    />
+     
+    Only show products in stock
+  </p>
+</form>
+`;

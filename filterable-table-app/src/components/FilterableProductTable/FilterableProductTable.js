@@ -1,29 +1,26 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { ProductTable, SearchBar}  from './';
+import { ProductTable, SearchBar }  from '..';
 
-class FilterableProductTable extends Component {
+class FilterableProductTable extends PureComponent {
   constructor(props){
     super(props);
     this.state = {
       filteredProducts: props.products,
       includeOutOfStock: true
     };
-
-    this.filterProduct = this.filterProduct.bind(this);
-    this.filterStock = this.filterStock.bind(this);
   }
   render() {
-    let products = this.state.filteredProducts;
+    let { filteredProducts, includeOutOfStock } = this.state;
 
-    if(!this.state.includeOutOfStock) {
-      products = products.filter(product => product.stocked);
+    if(!includeOutOfStock) {
+      filteredProducts = filteredProducts.filter(product => product.stocked);
     }
 
     return (
       <div className='wrapper'>
-        <SearchBar filter={ this.filterProduct } onClick={ this.filterStock } />
-        <ProductTable products={ products } />
+        <SearchBar handleFilter={ this.filterProduct.bind(this) } handleClick={ this.filterStock.bind(this) } />
+        <ProductTable products={ filteredProducts } />
       </div>
     );
   }
