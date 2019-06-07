@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KeyButton tests should render as expected 1`] = `
+<button
+  name="5"
+  onClick={[Function]}
+  type="button"
+>
+  5
+</button>
+`;

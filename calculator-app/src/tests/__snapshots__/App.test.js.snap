@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App tests should render as expected 1`] = `
+<div>
+  <div
+    className="calculator-body"
+  >
+    <h1>
+      Simple Calculator
+    </h1>
+    <Result />
+    <Memo(KeyPad)
+      handleClick={[Function]}
+    />
+  </div>
+</div>
+`;

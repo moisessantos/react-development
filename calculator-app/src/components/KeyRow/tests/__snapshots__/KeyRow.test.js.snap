@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KeyRow tests should render as expected 1`] = `
+<Fragment>
+  <Memo(KeyButton)
+    handleClick={[MockFunction]}
+    key="1"
+    text={1}
+  />
+  <Memo(KeyButton)
+    handleClick={[MockFunction]}
+    key="2"
+    text={2}
+  />
+  <Memo(KeyButton)
+    handleClick={[MockFunction]}
+    key="3"
+    text={3}
+  />
+  <Memo(KeyButton)
+    handleClick={[MockFunction]}
+    key="4"
+    text={4}
+  />
+  <br />
+</Fragment>
+`;
