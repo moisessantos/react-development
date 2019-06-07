@@ -20,14 +20,14 @@ exports[`TodoList component should render snapshot 1`] = `
     </button>
   </div>
   <Memo(Item)
+    handleClick={[Function]}
     key="0"
-    onDelete={[Function]}
   >
     Get up
   </Memo(Item)>
   <Memo(Item)
+    handleClick={[Function]}
     key="1"
-    onDelete={[Function]}
   >
     Do homework
   </Memo(Item)>

@@ -11,7 +11,10 @@ describe('Item component', () => {
     const mock = jest.fn();
     const wrapper = shallow(<Item handleClick={ mock }>Do homework    </Item>);
     
-    wrapper.find('button').simulate('click', { target: { previousSibling: { innerHTML: "Do homework     " }} });
+    wrapper.find('button').simulate('click', { target: { previousSibling: { innerHTML: { 
+      get innerHTML(){ return "Do homework     "}, 
+      set innerHTML(value) { mock(value)}}
+    } }});
 
     expect(mock).toBeCalledTimes(1);
     expect(mock).toBeCalledWith("Do homework");

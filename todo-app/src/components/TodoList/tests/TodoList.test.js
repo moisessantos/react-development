@@ -16,8 +16,8 @@ describe('TodoList component', () => {
     wrapper.find('input').text(todo);
     wrapper.find('button').simulate('click',{ target: { previousSibling: 
       { 
-        get innerHTML(){ return todo}, 
-        set innerHTML(value) { mock(value)}}
+        get value(){ return todo}, 
+        set value(value) { mock(value)}}
       }
     });
     expect(wrapper.state('currentItems')[2]).toBe(todo);
@@ -33,8 +33,8 @@ describe('TodoList component', () => {
     wrapper.find('input').text(todo);
     wrapper.find('button').simulate('click',{ target: { previousSibling: 
       { 
-        get innerHTML(){ return todo}, 
-        set innerHTML(value) { mock(value)}}
+        get value(){ return todo}, 
+        set value(value) { mock(value)}}
       }
     });
     expect(wrapper.state('currentItems').length).toBe(2);

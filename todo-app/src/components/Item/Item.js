@@ -5,7 +5,7 @@ const Item = ({ children, handleClick }) => (
         <li>
             <span>{ children }</span>
             <button 
-              onClick={(e) => handleClick(e.target.previousSibling.innerHTML.replace(/\s*$/,''))}
+              onClick={(e) => handleClick(e.target.previousSibling.innerHTML.trimEnd())}
             >Delete</button>
         </li>
     );

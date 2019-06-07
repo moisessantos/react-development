@@ -1,14 +1,15 @@
-import React, { PureComponent } from 'react';
+import React, { Component, createRef } from 'react';
 import PropTypes from 'prop-types';
 import { Item } from '..';
 
-class TodoList extends PureComponent {
+class TodoList extends Component {
   constructor(props) {
     super(props)
     this.state = {
       currentItems: props.items,
     };
     this.addTodo = this.addTodo.bind(this);
+    this.ref = createRef();
   }
   render() {
     return (
@@ -16,7 +17,7 @@ class TodoList extends PureComponent {
         <h1>This is my todo list</h1>
         {this.renderAddTodo()}     
         { this.state.currentItems
-            .map((item, index) => <Item key={index} onDelete={this.removeTodo.bind(this)}>{item}</Item>) }
+            .map((item, index) => <Item key={index} handleClick={this.removeTodo.bind(this)}>{item}</Item>) }
       </div>
     );
   }
@@ -31,15 +32,17 @@ class TodoList extends PureComponent {
   }
 
   addTodo(element) {
-    if(this.state.currentItems.includes(element.innerHTML)){
+    if(this.state.currentItems.includes(element.value)){
       return;
     }
     
-    this.state.currentItems.push(element.innerHTML);
-    element.innerHTML = '';
-    
+    const { currentItems } = this.state;
+    currentItems.push(element.value);
+
+    element.value = '';
+
     this.setState({
-      currentItems: this.state.currentItems,
+      currentItems,
     });
   }
 
