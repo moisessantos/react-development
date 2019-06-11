@@ -15,18 +15,20 @@ class TodoList extends Component {
     return (
       <div className="container">
         <h1>This is my todo list</h1>
-        {this.renderAddTodo()}     
-        { this.state.currentItems
-            .map((item, index) => <Item key={index} handleClick={this.removeTodo.bind(this)}>{item}</Item>) }
+        <ul className="list-group">
+          {this.renderAddTodo()}
+          { this.state.currentItems
+              .map((item, index) => <Item key={index} handleClick={this.removeTodo.bind(this)}>{item}</Item>) }
+        </ul>
       </div>
     );
   }
 
   renderAddTodo() {
     return (
-      <div className="addTodo">
-        <input type="text" />
-        <button onClick={ (e) => this.addTodo(e.target.previousSibling) }>Add todo</button>
+      <div className="list-group-item list-group-item-action">
+        <input type="text" class="addTodo form-control" />
+        <button className="btn btn-primary" onClick={ (e) => this.addTodo(e.target.previousSibling) }>Add todo</button>
       </div> 
     );
   }
