@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import Result from './components/Result';
 import { KeyPad } from './components';
 
-import './App.css';
-
 class App extends Component {
   constructor(){
       super();

@@ -1,13 +1,14 @@
-import React, { Fragment, memo } from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 import { KeyButton } from '..';
 
 const KeyRow = ({ values, handleClick }) => (
-  <Fragment>
+  <ButtonGroup size="lg">
     {values.map(value => <KeyButton key={value} text={value} handleClick={handleClick} />)}
     <br />
-  </Fragment>
+  </ButtonGroup>
 );
 
 KeyRow.propTypes = {
