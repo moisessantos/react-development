@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import Slider from '@material-ui/lab/Slider';
+
 import click1 from './sounds/click1.wav';
 import click2 from './sounds/click2.wav';
+
 import './App.css';
 
 class Metronome extends Component {
@@ -58,8 +63,8 @@ class Metronome extends Component {
     }));
   };
 
-  handleBpmChange = event => {
-    const bpm = event.target.value;
+  handleBpmChange = (event, value) => {
+    const bpm = value;
   
     if (this.state.playing) {
       // Stop the old timer and start a new one
@@ -83,17 +88,20 @@ class Metronome extends Component {
     return (
       <div className="metronome">
         <div className="bpm-slider">
-          <div>{bpm} BPM</div>
-          <input 
+          <Typography variant="h3" className="h3">{bpm} BPM</Typography>
+          <Slider 
             type="range" 
-            min="60" 
-            max="240" 
+            className="slider"
+            min={60} 
+            max={300} 
             value={bpm} 
-            onChange={this.handleBpmChange}/>
+            step={5}
+            onChange={this.handleBpmChange} />
         </div>
-        <button onClick={this.startStop}>
+        
+        <Button variant="contained" color="primary" onClick={this.startStop}>
           {playing ? 'Stop' : 'Start'}
-        </button>
+        </Button>
       </div>
     );
   }
