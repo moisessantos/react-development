@@ -2,7 +2,7 @@
 
 exports[`TodoList component should render snapshot 1`] = `
 <div
-  className="container"
+  className="container col-md-6 col-sm-12"
 >
   <h1>
     This is my todo list

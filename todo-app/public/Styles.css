@@ -1,12 +1,5 @@
 .container {
-    width: 100%;
     max-width: unset;
-}
-
-@media only screen and (min-width: 1000px){
-    .container {
-        width: 50%;
-    }
 }
 
 h1 {
@@ -24,6 +17,6 @@ li {
 }
 
 .addTodo {
-    display: inline-block;
-    width: 70%;
+    display: inline-block !important;
+    width: 70% !important;
 }

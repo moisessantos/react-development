@@ -13,7 +13,7 @@ class TodoList extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <div className="container col-md-6 col-sm-12">
         <h1>This is my todo list</h1>
         <ul className="list-group">
           {this.renderAddTodo()}
