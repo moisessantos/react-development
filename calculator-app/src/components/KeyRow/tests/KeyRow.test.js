@@ -4,7 +4,7 @@ import KeyRow from '..';
 
 describe('KeyRow tests', () => {
     it('should render as expected', () => {
-        const wrapper = shallow(<KeyRow values={[1,2,3,4]} handleClick={ jest.fn() } />)
+        const wrapper = shallow(<KeyRow values={[1,2,3,4]} />)
         expect(wrapper).toMatchSnapshot();
     });
 })

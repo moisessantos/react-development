@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<useClickContext /> spec throws error when context is undefined 1`] = `[Error: useClickContext must be used within the ClickContextProvider]`;

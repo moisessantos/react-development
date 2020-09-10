@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Result from './components/Result';
 import { KeyPad } from './components';
+import { ClickContext } from './ClickContext';
 
 class App extends Component {
   constructor(){
@@ -56,7 +57,9 @@ class App extends Component {
               <div className="calculator-body">
                   <h1>Simple Calculator</h1>
                   <Result>{this.state.result}</Result>
-                  <KeyPad handleClick={this.onClick} />
+                  <ClickContext.Provider value={this.onClick}>
+                    <KeyPad />
+                  </ClickContext.Provider>
               </div>
           </div>
       );

@@ -4,7 +4,7 @@ import KeyPad from '../';
 
 describe('KeyPad tests', () => {
     it('should render as expected', () => {
-        const wrapper = shallow(<KeyPad handleClick={ jest.fn() } />)
+        const wrapper = shallow(<KeyPad />)
         expect(wrapper).toMatchSnapshot();
     });
 })

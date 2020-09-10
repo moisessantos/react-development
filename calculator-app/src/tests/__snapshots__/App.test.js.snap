@@ -9,9 +9,11 @@ exports[`App tests should render as expected 1`] = `
       Simple Calculator
     </h1>
     <Result />
-    <Memo(KeyPad)
-      handleClick={[Function]}
-    />
+    <ContextProvider
+      value={[Function]}
+    >
+      <Memo(KeyPad) />
+    </ContextProvider>
   </div>
 </div>
 `;

@@ -67,22 +67,22 @@ describe('App tests', () => {
 
     it('calculate should return error in case of typos 2', () => {
         const wrapper = shallow(<App />);
-        wrapper.find('Memo(KeyPad)').props().handleClick(1);
-        wrapper.find('Memo(KeyPad)').props().handleClick("+");
-        wrapper.find('Memo(KeyPad)').props().handleClick("*");
-        wrapper.find('Memo(KeyPad)').props().handleClick(2);
-        wrapper.find('Memo(KeyPad)').props().handleClick("=");
+        wrapper.find('ContextProvider').props().value(1);
+        wrapper.find('ContextProvider').props().value("+");
+        wrapper.find('ContextProvider').props().value("*");
+        wrapper.find('ContextProvider').props().value(2);
+        wrapper.find('ContextProvider').props().value("=");
         expect(wrapper.find('Result').props().children).toBe("error");
     });
 
     it('resets or backspaces result', () => {
         const wrapper = shallow(<App />);
-        wrapper.find('Memo(KeyPad)').props().handleClick(1);
-        wrapper.find('Memo(KeyPad)').props().handleClick("C");
+        wrapper.find('ContextProvider').props().value(1);
+        wrapper.find('ContextProvider').props().value("C");
         expect(wrapper.find('Result').props().children).toBe("");
-        wrapper.find('Memo(KeyPad)').props().handleClick(2);
-        wrapper.find('Memo(KeyPad)').props().handleClick("*");
-        wrapper.find('Memo(KeyPad)').props().handleClick("CE");
+        wrapper.find('ContextProvider').props().value(2);
+        wrapper.find('ContextProvider').props().value("*");
+        wrapper.find('ContextProvider').props().value("CE");
         expect(wrapper.find('Result').props().children).toBe("2");
     });
 })
