@@ -7,4 +7,8 @@ describe('Result tests', () => {
         const wrapper = shallow(<Result>500</Result>)
         expect(wrapper).toMatchSnapshot();
     });
-})
+    it('should render without children', () => {
+        const wrapper = shallow(<Result></Result>)
+        expect(wrapper).toMatchSnapshot();
+    });
+});

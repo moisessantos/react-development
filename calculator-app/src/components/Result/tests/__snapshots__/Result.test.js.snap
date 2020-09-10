@@ -1,11 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Result tests should render as expected 1`] = `
-<div
-  className="result"
+<Bootstrap(InputGroup)
+  size="lg"
 >
-  <p>
-    500
-  </p>
-</div>
+  500
+</Bootstrap(InputGroup)>
+`;
+
+exports[`Result tests should render without children 1`] = `
+<Bootstrap(InputGroup)
+  size="lg"
+>
+  0
+</Bootstrap(InputGroup)>
 `;

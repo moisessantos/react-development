@@ -12,7 +12,8 @@ describe('KeyButton tests', () => {
         const mock = jest.fn();
         const event = { target: { name: '5' } };
         const wrapper = shallow(<KeyButton text='5' handleClick={ mock } />);
-        wrapper.find('button').simulate('click', event);
+        wrapper.find('Button').simulate('click', event);
+
 
         expect(mock).toBeCalledTimes(1);
         expect(mock).toBeCalledWith(event.target.name);

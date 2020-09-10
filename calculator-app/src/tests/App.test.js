@@ -65,11 +65,24 @@ describe('App tests', () => {
         expect(wrapper.state().result).toBe("3");
     });
 
-    it('calculate should return error in case of typos', () => {
+    it('calculate should return error in case of typos 2', () => {
         const wrapper = shallow(<App />);
-        wrapper.setState({ result: "1+*2" })
-        wrapper.instance().calculate();
+        wrapper.find('Memo(KeyPad)').props().handleClick(1);
+        wrapper.find('Memo(KeyPad)').props().handleClick("+");
+        wrapper.find('Memo(KeyPad)').props().handleClick("*");
+        wrapper.find('Memo(KeyPad)').props().handleClick(2);
+        wrapper.find('Memo(KeyPad)').props().handleClick("=");
+        expect(wrapper.find('Result').props().children).toBe("error");
+    });
 
-        expect(wrapper.state().result).toBe("error");
+    it('resets or backspaces result', () => {
+        const wrapper = shallow(<App />);
+        wrapper.find('Memo(KeyPad)').props().handleClick(1);
+        wrapper.find('Memo(KeyPad)').props().handleClick("C");
+        expect(wrapper.find('Result').props().children).toBe("");
+        wrapper.find('Memo(KeyPad)').props().handleClick(2);
+        wrapper.find('Memo(KeyPad)').props().handleClick("*");
+        wrapper.find('Memo(KeyPad)').props().handleClick("CE");
+        expect(wrapper.find('Result').props().children).toBe("2");
     });
 })

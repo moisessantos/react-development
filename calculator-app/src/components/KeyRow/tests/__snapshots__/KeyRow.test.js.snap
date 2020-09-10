@@ -1,7 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`KeyRow tests should render as expected 1`] = `
-<Fragment>
+<ButtonGroup
+  role="group"
+  size="lg"
+  toggle={false}
+  vertical={false}
+>
   <Memo(KeyButton)
     handleClick={[MockFunction]}
     key="1"
@@ -23,5 +28,5 @@ exports[`KeyRow tests should render as expected 1`] = `
     text={4}
   />
   <br />
-</Fragment>
+</ButtonGroup>
 `;
